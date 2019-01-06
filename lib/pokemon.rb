@@ -17,7 +17,7 @@ class Pokemon
   def self.find(id, db)
     values = db.execute("SELECT * FROM Pokemon WHERE id=?", id)[0]
     binding.pry
-    hash = {id: values[0], name: values[1], type: values[2], db: db}
+    hash = {id: values[0], name: values[1], type: values[2], hp: values[3], db: db}
     Pokemon.new(hash)
   end
   
