@@ -2,7 +2,7 @@ class Pokemon
   
   attr_accessor :id, :name, :type, :db, :hp
   
-  def initialize(args)
+  def initialize(id:, name:, type:, db:, hp:=nil)
     args.each do |k, v|
       self.send("#{k}=", v)
     end
